@@ -1,0 +1,39 @@
+﻿<Window x:Class="Rootbreak.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Rootbreak" Height="400" Width="500" Background="#2D2D30">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Background" Value="#3C3C3C" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Margin" Value="5" />
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontSize" Value="16" />
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Foreground" Value="LightGreen" />
+            <Setter Property="Background" Value="#1E1E1E" />
+            <Setter Property="FontFamily" Value="Consolas" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="Padding" Value="5" />
+        </Style>
+    </Window.Resources>
+
+    <StackPanel Margin="10">
+        <Label x:Name="StatusLabel" Content="Device Status: Not Connected" FontSize="18" Margin="0,0,0,10" />
+
+        <Button x:Name="JailbreakButton" Content="Jailbreak" Width="100" Height="30" 
+                Visibility="Hidden" Click="JailbreakButton_Click" />
+
+        <Button x:Name="RootButton" Content="Root" Width="100" Height="30" 
+                Visibility="Hidden" Click="RootButton_Click" />
+
+        <ProgressBar x:Name="ProgressBar" Height="20" Margin="0,10,0,10" Visibility="Hidden"/>
+
+        <TextBox x:Name="OutputTextBox" Height="200" IsReadOnly="True" 
+                 VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"/>
+    </StackPanel>
+</Window>
